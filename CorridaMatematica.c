@@ -116,11 +116,17 @@ int main() {
                 liberar(&head, &tail);
             }
         }else if(escolha == 2){ 
+            char seguir;
             printf("\n");
             printf("A corrida matematica consiste em um jogo de perguntas matematicas, sendo 5 perguntas envolvendo diferentes operacoes.\n");
             printf("O jogador que conseguir responder primeiro as 5 perguntas ganha. Caso mais de um jogador acerte as perguntas na mesma rodada,\n");
             printf("ocorrera um empate.\n");
             printf("\n");
+            printf("Digite 1 para seguir: \n");
+            getchar();
+            scanf("%c",&seguir);
+            printf("\033[H\033[J");
+            
         }else if(escolha == 3){ 
             printf("Obrigado por acessar o jogo, ate a proxima!!");
             exit(1);
