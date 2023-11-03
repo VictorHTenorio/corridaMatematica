@@ -236,14 +236,17 @@ int equacao(){
     }
 }
 
-void tabelaScore(Node *head, Node* tail){
-    if(head != NULL){
+void tabelaScore(Node *head, Node *tail) {
+    if (head != NULL) {
+        int largura1 = 20;
+        int largura2 = 10;
+
         printf("\033[H\033[J");
-        printf("Jogador | Pontuacao\n");
-        do{
-            printf("%s | %d\n",head->nome,head->score);
+        printf("%*s | %*s\n", largura1, "Jogador", largura2, "Pontuacao");
+        do {
+            printf("%*s | %*d\n", largura1, head->nome, largura2, head->score);
             head = head->prox;
-        }while(head != tail->prox);
+        } while (head != tail->prox);
     }
 }
 
